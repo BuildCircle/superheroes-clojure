@@ -2,7 +2,7 @@
   (:require [cheshire.core :as json])
   (:gen-class))
 
-(def api-url " https://s3.eu-west-2.amazonaws.com/build-circle/characters.json")
+(def api-url "https://s3.eu-west-2.amazonaws.com/build-circle/characters.json")
 
 (def api-data (:items (json/parse-string (slurp api-url) (fn [k] (keyword k)))))
 
